@@ -1,0 +1,30 @@
+# yaml plugin metadata
+ 
+name: telnet-plugin
+version: 1.0
+rundeckPluginVersion: 1.0
+author: Adonys Maceo <adomaceo@yahoo.es>
+date: 02/23/2017
+providers:
+    - name: telnet-node-executor
+      service: NodeExecutor
+      title: TELNET
+      description: "Run a command to the remote node using Telnet Client"
+      plugin-type: script
+      script-interpreter: /usr/bin/expect
+      script-file: telnet-nodeexecutor.sh
+      script-args: ${node.hostname} ${node.username}
+      config:
+        - name: ssh_password_storage_path
+          title: SSH Password Storage Path
+          type: String
+          required: false
+          description: "Optional storage path for ssh-password. Can contain property references to node attributes. A node attribute named ssh-password-storage-path will override this value."
+          scope: Instance
+          renderingOptions:
+            selectionAccessor: "STORAGE_PATH"
+            valueConversion: "STORAGE_PATH_AUTOMATIC_READ"
+            storage-path-root: "keys"
+            instance-scope-node-attribute: "password-storage-path"
+            storage-file-meta-filter: "Rundeck-data-type=password"
+
