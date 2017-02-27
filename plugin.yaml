@@ -15,11 +15,11 @@ providers:
       script-file: telnet-nodeexecutor.sh
       script-args: ${node.hostname} ${node.username}
       config:
-        - name: ssh_password_storage_path
-          title: SSH Password Storage Path
+        - name: passwordStoragePath
+          title: Telnet Password Storage Path
           type: String
           required: false
-          description: "Optional storage path for ssh-password. Can contain property references to node attributes. A node attribute named ssh-password-storage-path will override this value."
+          description: "Optional storage path for Telnet. Can contain property references to node attributes. A node attribute named ssh-password-storage-path will override this value."
           scope: Instance
           renderingOptions:
             selectionAccessor: "STORAGE_PATH"

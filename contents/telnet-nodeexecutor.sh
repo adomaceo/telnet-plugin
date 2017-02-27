@@ -19,7 +19,7 @@ set prompt "#"; # default prompt
 
 #log_file telnet-nodeexecutor.log;
 
-puts "Argumentos: $argv"
+#puts "Arguments: $argv"
 
 # use RD env variable from node attributes for telnet-port value, default to 23:
 catch {set telnetport $env(RD_NODE_TELNET_PORT)}
