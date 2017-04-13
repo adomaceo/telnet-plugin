@@ -1,9 +1,9 @@
 # Rundeck telnet Plugin
 
-##Description
+## Description
 A Rundeck [Node Executor](http://rundeck.org/docs/plugins-user-guide/node-execution-plugins.html) plugin that allow to execute commands on remote nodes over telnet.
 
-##Configuration
+## Configuration
 
 - `passwordStoragePath` - Rundeck default storage path for the telnet user password (currently it is not working)
 
@@ -25,5 +25,5 @@ These Node attributes are used to connect or iteract to the remote host:
 * `telnet_exit_cmd` - Telnet exit command, default is `quit`.
 
 
-##Requierements
+## Requierements
 This plugin requiere of [expect](https://linux.die.net/man/1/expect)
